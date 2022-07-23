@@ -75,13 +75,13 @@ function calculate() {
       alert("You can not divide by zero!");
     } else {
       if (values[1] === "+") {
-        ans = parseFloat(values[0]) + parseFloat(values[2]);
+        ans = (parseFloat(values[0]) + parseFloat(values[2])).toFixed(3);
       } else if (values[1] === "-") {
-        ans = parseFloat(values[0]) - parseFloat(values[2]);
+        ans = (parseFloat(values[0]) - parseFloat(values[2])).toFixed(3);
       } else if (values[1] === "*") {
-        ans = parseFloat(values[0]) * parseFloat(values[2]);
+        ans = (parseFloat(values[0]) * parseFloat(values[2])).toFixed(3);
       } else if (values[1] === "/") {
-        ans = parseFloat(values[0]) / parseFloat(values[2]);
+        ans = (parseFloat(values[0]) / parseFloat(values[2])).toFixed(3);
       }
     }
   } else if (values[1] && !values[2]) {
