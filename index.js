@@ -74,7 +74,6 @@ function calculate() {
     if (values[1] === "/" && values[2] === "0") {
       alert("You can not divide by zero!");
     } else {
-      // ans = eval(values[0] + values[1] + values[2]);
       if (values[1] === "+") {
         ans = values[0].parseFloat() + values[2];
       } else if (values[1] === "-") {
