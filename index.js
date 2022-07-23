@@ -132,8 +132,6 @@ function delBtn() {
     values = [];
     if (newValue.indexOf(".") >= 0) {
       dot = true;
-    } else if (newValue === "0." || newValue === "0") {
-      dot = false;
     } else {
       dot = false;
     }
