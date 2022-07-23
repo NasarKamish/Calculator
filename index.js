@@ -75,13 +75,13 @@ function calculate() {
       alert("You can not divide by zero!");
     } else {
       if (values[1] === "+") {
-        ans = values[0].parseFloat() + values[2];
+        ans = parseFloat(values[0]) + parseFloat(values[2]);
       } else if (values[1] === "-") {
-        ans = values[0].parseFloat() - values[2];
+        ans = parseFloat(values[0]) - parseFloat(values[2]);
       } else if (values[1] === "*") {
-        ans = values[0].parseFloat() * values[2];
+        ans = parseFloat(values[0]) * parseFloat(values[2]);
       } else if (values[1] === "/") {
-        ans = values[0].parseFloat() / values[2];
+        ans = parseFloat(values[0]) / parseFloat(values[2]);
       }
     }
   } else if (values[1] && !values[2]) {
@@ -173,7 +173,15 @@ function action(key) {
     calculate();
   } else if (key in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]) {
     // Numbers //
-    value += key;
+    console.log(key);
+    console.log(value);
+    if (key !== "0" && value !== "0") {
+      value += key;
+    } else if (key === "0" && value !== "0") {
+      value += key;
+    } else if (value === "0") {
+      value = key;
+    }
   } else if (key === "." && !dot) {
     // DOT //
     if (value) {
