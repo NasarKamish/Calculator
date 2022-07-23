@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Digital;
+  src: url(fonts/digital-7.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 50vw;
+  height: 90vh;
+  border-radius: 50px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cal-screen {
+  width: 90%;
+  height: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: lime;
+  border-radius: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  font-family: Digital;
+  transition: all 0.3s linear;
+}
+
+.cal-screen.deactive {
+  background-color: green;
+}
+
+.cal-btns {
+  width: 100%;
+  height: 80%;
+  padding: 5%;
+  padding-top: 0;
+  background-color: rgb(54, 54, 54);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns-row {
+  width: 100%;
+  height: calc(80% / 5);
+  margin-bottom: 2%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cal-btn {
+  height: 50px;
+  width: 120px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  border: white solid 2px;
+  transition: all 0.3s linear;
+}
+
+.cal-btn.deactive {
+  background-color: grey;
+}
